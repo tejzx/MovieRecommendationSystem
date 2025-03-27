@@ -1,54 +1,64 @@
-## 🎬 Movie Recommendation System  
+# 🎬 Movie Recommendation System
 
-### 📌 Overview  
-This project is a **Movie Recommendation System** built using **Streamlit**, **pandas**, and **scikit-learn**. It suggests similar movies based on a given input, using a **cosine similarity** metric computed from movie metadata. The system also fetches movie posters from **The Movie Database (TMDB) API** to enhance the user experience.  
+## 🚀 Overview
+This project aims to build a **Movie Recommendation System** that suggests movies based on user preferences. The system utilizes **collaborative filtering, content-based filtering, and hybrid approaches** to enhance recommendations.
 
-### 🚀 Features  
-✅ Recommend **top 10 similar movies** based on user selection  
-✅ **Movie poster display** fetched from TMDB API  
-✅ **Interactive UI** with Streamlit  
-✅ Uses **cosine similarity** for recommendations  
-
-### 🛠️ Tech Stack  
-- **Python**  
-- **Streamlit** (for UI)  
-- **pandas** (for data processing)  
-- **scikit-learn** (for similarity calculations)  
-- **TMDB API** (for movie posters)  
-
-### 📂 Project Structure  
+## 📂 Project Structure
 ```
-📦 Movie Recommendation System
-│-- 📜 app.py                     # Streamlit app  
-│-- 📜 Movie_Recommendation_System.ipynb  # Jupyter notebook for data processing  
-│-- 📜 movie_data.pkl              # Preprocessed movie data and similarity matrix  
-│-- 📜 README.md                   # Project documentation  
+├── data/                 # Dataset and cleaned data files
+├── notebooks/            # Jupyter notebooks for analysis & modeling
+├── src/                  # Python scripts for preprocessing & model training
+├── models/               # Saved trained recommendation models
+├── README.md             # Project documentation
+├── requirements.txt      # Dependencies
 ```
 
-### ▶️ How to Run  
-1️⃣ Clone the repository  
+## 📊 Dataset Description
+The dataset includes:
+- **Movie details**: Titles, genres, descriptions, and release year.
+- **User interaction data**: Ratings, watch history, and user preferences.
+- **Metadata**: Cast, crew, and movie keywords.
+
+## 🛠️ Installation
+To run this project locally, follow these steps:
 ```bash
-git clone https://github.com/your-username/movie-recommendation-system.git
-cd movie-recommendation-system
-```
-2️⃣ Install dependencies  
-```bash
+# Clone the repository
+git clone https://github.com/yourusername/Movie-Recommendation.git
+cd Movie-Recommendation
+
+# Install dependencies
 pip install -r requirements.txt
 ```
-3️⃣ Run the Streamlit app  
+
+## 🔍 Data Preprocessing
+- Handling missing values and duplicates.
+- Feature extraction from movie descriptions and genres.
+- Encoding categorical data for machine learning models.
+
+## 🤖 Recommendation Models
+- **Content-Based Filtering**: Recommends movies similar to the ones a user has liked.
+- **Collaborative Filtering**: Suggests movies based on user interaction patterns.
+- **Hybrid Approach**: Combines both techniques for better accuracy.
+
+## 📈 Key Insights
+- User preferences play a significant role in personalized recommendations.
+- Content-based recommendations improve when combined with metadata.
+- Collaborative filtering enhances recommendations for users with a strong watch history.
+
+## 📌 How to Use
+Run the Jupyter Notebook:
 ```bash
-streamlit run app.py
+jupyter notebook MovieRecommendation.ipynb
 ```
-4️⃣ Select a movie and get recommendations! 🎥  
+Modify hyperparameters in `src/model_training.py` to experiment with different models.
 
-### 🔑 API Key  
-To fetch posters from **TMDB**, replace the API key in `app.py`:  
-```python
-api_key = 'your_tmdb_api_key'
-```
-Get your API key from [TMDB](https://www.themoviedb.org/) and update it in the code.  
+## 🔗 References
+- [MovieLens Dataset](https://grouplens.org/datasets/movielens/)
+- [Pandas Documentation](https://pandas.pydata.org/docs/)
+- [Scikit-learn](https://scikit-learn.org/stable/)
 
-### 📌 Future Enhancements  
-✅ Add **genre-based filtering**  
-✅ Implement **collaborative filtering**  
-✅ Improve **UI/UX** with enhanced visuals  
+## 🤝 Contributing
+Want to contribute? Feel free to fork the repo and submit pull requests!
+
+## 📜 License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
